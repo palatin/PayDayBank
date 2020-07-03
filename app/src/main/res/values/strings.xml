@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PaydayBank</string>
+    <!-- Strings used for fragments for navigation -->
+
 </resources>
