@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/categoryFragment"
+    android:id="@+id/nav_dashboard">
+
+    <fragment android:name="com.payday.paydaybank.dashboard.category.CategoryFragment"
+        android:id="@+id/categoryFragment"
+        >
+        <action
+            android:id="@+id/action_categoryFragment_to_transactionsFragment"
+            app:destination="@id/transactionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.payday.paydaybank.dashboard.transactions.TransactionsFragment"
+        android:label="TransactionsFragment" />
+
+</navigation>
