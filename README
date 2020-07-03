@@ -1,9 +1,10 @@
+#PayDay Bank
 The app is tes project demonstating my vision of banking client.
 It contains next features:
--SignIn with fingerprint auth from android 6.0. User's password stores in the most security place - AndroidKeystore system with AES encryption. (Note: authenticate API not working, so the application return stub account data)
--Fetching and displaying all transaction categories by given account with sorting by date's range.
--Displaying transactions by given category
-
++SignIn with fingerprint auth from android 6.0. User's password stores in the most security place - AndroidKeystore system with AES encryption. (Note: authenticate API not working, so the application return stub account data)
++Fetching and displaying all transaction categories by given account with sorting by date's range.
++Displaying transactions by given category
+https://github.com/palatin/PayDayBank.git
 Project uses next libraries/technologies: Kotlin, Okhttp, Coroutines, Retrofit, Dagger2 with Hilt, Lifecycle, LiveData, ViewModel, Moshi, Glide, JUnit, Mockito, UI navigation
 
 TODOS/Improvements
