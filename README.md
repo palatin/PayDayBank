@@ -25,3 +25,31 @@ Project uses next libraries/technologies: Kotlin, Okhttp, Coroutines, Retrofit, 
 + make ui constraints, e.g. hanling long texts, different screen sizes
 + handle application state restoration
 
+### Technical questions
+1) How long did you spend on the coding test? What would you add to your solution if you had more time? If you didn't
+spend much time on the coding test then use this as an opportunity to explain what you would add.
+
+usually 20% of amoun time. I would test all components separately, e.g. repository with mocking data providers, usecases, viewmodels - interaction with ui
+
+2) What was the most useful feature that was added to the latest version of your chosen language? Please include a
+snippet of code that shows how you've used it.
+
+Currently the newest feature of kotlin is coroutines flow that can be uses instead of RxJava and has tie integration with ui lifecycle
+ private var categories: Collection<Category> = listOf()
+    private val click = BroadcastChannel<View>(1)
+    val clickFlow = click.asFlow().mapLatest { Pair(it,
+        categories.elementAt((it.parent as RecyclerView).getChildAdapterPosition(it))) }.catch {  }
+
+3) How would you track down a performance issue in production? Have you ever had to do this?
+The golden rule of mobile development performance is to move operation out of ui threads and using parralel executions. To track performance I use measureTimeInMillis from kotlin.
+
+4) How would you debug issues related to API usage? Can you give us an example?
+To test application behaviour we need to create repository tests with mocking network data provider
+
+
+5) How would you improve the Node server’s API that you just used?
++ User json should not contains password but token
++ List of transactions should contains only related to current account id
++ Dates should be represented as Long timestamp variable
++ Amounts should be represented as Float variable
+there are can be some structures improvements, e.g. sorting transactions by dates on server side when placing in database.
