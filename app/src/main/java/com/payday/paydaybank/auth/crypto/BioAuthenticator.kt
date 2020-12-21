@@ -35,7 +35,7 @@ class BioAuthenticator @Inject constructor(private val fragment: Fragment) {
             }
 
             override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
-                super.onAuthenticationError(errorCode, errString)
+                completableDeferred.completeExceptionally(Exception(errString.toString()))
             }
         })
 
